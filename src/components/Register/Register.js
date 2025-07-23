@@ -18,7 +18,7 @@ export default function Register() {
         console.log(data);
         setMessage("");
         try{
-            const response = await fetch("http://localhost:8080/api/account",{
+            const response = await fetch("https://94txyl-8080.csb.app/api/account",{
                method: "post",
                headers: {
                    "Accept": "application/json",

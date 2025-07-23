@@ -9,7 +9,7 @@ export default function Carlist (){
     useEffect(()=>{
         const fetchData = async () => {
             try{
-                const response = await fetch("http://localhost:8080/api/cars");
+                const response = await fetch("https://94txyl-8080.csb.app/api/cars");
                 const data = await response.json();
                 const carList = Array.isArray(data) ? data : data.cars;
                 if (Array.isArray(carList)) setCars(carList);

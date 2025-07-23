@@ -29,7 +29,7 @@ export default function DetailCars() {
     useEffect(()=>{
         const fetchData = async () => {
             try{
-                const response = await fetch("http://localhost:8080/api/cars/"+carid);
+                const response = await fetch("https://94txyl-8080.csb.app/api/cars/"+carid);
                 const data = await response.json();
                 console.log(data);
                 setCar(data);
@@ -55,7 +55,7 @@ export default function DetailCars() {
                                                     })
         console.log(payment);
         try{
-            const response = await fetch("http://localhost:8080/api/payment", {
+            const response = await fetch("https://94txyl-8080.csb.app/api/payment", {
                 method:"post",
                 headers:{
                     "Accept":"application/json",

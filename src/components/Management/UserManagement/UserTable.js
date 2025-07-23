@@ -6,7 +6,7 @@ export default function UserTable(){
     useEffect(()=>{
         const fecthData = async () => {
             try{
-                const response = await fetch("http://localhost:8080/api/users");
+                const response = await fetch("https://94txyl-8080.csb.app/api/users");
                 const data = await response.json();
                 console.log("data",data);
                 setUsers(data);
@@ -21,7 +21,7 @@ export default function UserTable(){
     const handleDelete = async(name) => {
         console.log("name",name);
         try{
-            const response = await fetch("http://localhost:8080/api/delete", {
+            const response = await fetch("https://94txyl-8080.csb.app/api/delete", {
                 method: "post",
                 headers:{
                     "Accept": "application/json",

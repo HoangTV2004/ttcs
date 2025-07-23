@@ -10,7 +10,7 @@ export default function AddNewCar({onSuccess}) {
     const onsubmit = async(data) =>{
         const car = JSON.stringify(data);
         try{
-            const response = await fetch("http://localhost:8080/api/car", {
+            const response = await fetch("https://94txyl-8080.csb.app/api/car", {
                method:"post",
                headers:{
                    "Accept":"application/json",

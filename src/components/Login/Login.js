@@ -14,7 +14,7 @@ export default function Login({ onLogin }) {
 
     const onFinish = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/accounts", {
+            const response = await fetch("https://94txyl-8080.csb.app/api/accounts", {
                 method: "post",
                 headers: {
                     Accept: "application/json",

@@ -9,7 +9,7 @@ export default function PaymentList() {
     useEffect(()=>{
         const fetchData = async ()=>{
             try {
-                const response = await fetch("http://localhost:8080/api/payments")
+                const response = await fetch("https://94txyl-8080.csb.app/api/payments")
                 const data = await response.json();
                 setBookings(data);
                 console.log(data);
@@ -22,7 +22,7 @@ export default function PaymentList() {
     useEffect(()=>{
         const fetchData = async () => {
             try{
-                const response = await fetch("http://localhost:8080/api/cars");
+                const response = await fetch("https://94txyl-8080.csb.app/api/cars");
                 const data = await response.json();
                 //console.log(data);
                 setCars(data);
@@ -36,7 +36,7 @@ export default function PaymentList() {
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const response = await fetch("http://localhost:8080/api/users");
+                const response = await fetch("https://94txyl-8080.csb.app/api/users");
                 const data = await response.json();
                 setUsers(data);
                 console.log(data);
@@ -50,7 +50,7 @@ export default function PaymentList() {
     const handlePaid = async (id) => {
         const status = "Paid"
         try{
-            const response = await fetch("http://localhost:8080/api/checkout",{
+            const response = await fetch("https://94txyl-8080.csb.app/api/checkout",{
                 method:"post",
                 headers:{
                     "Accept":"application/json",
@@ -67,7 +67,7 @@ export default function PaymentList() {
     const handleUnPaid = async (id) => {
         const status = "UnPaid"
         try{
-            const response = await fetch("http://localhost:8080/api/checkout",{
+            const response = await fetch("https://94txyl-8080.csb.app/api/checkout",{
                 method:"post",
                 headers:{
                     "Accept":"application/json",
@@ -84,7 +84,7 @@ export default function PaymentList() {
     const handleGetCar = async (id) => {
         const status = "Renting"
         try{
-            const response = await fetch("http://localhost:8080/api/rent",{
+            const response = await fetch("https://94txyl-8080.csb.app/api/rent",{
                 method:"post",
                 headers:{
                     "Accept":"application/json",
@@ -101,7 +101,7 @@ export default function PaymentList() {
     const handlePaidCar = async(id) => {
         const status = "Rented"
         try{
-            const response = await fetch("http://localhost:8080/api/rent",{
+            const response = await fetch("https://94txyl-8080.csb.app/api/rent",{
                 method:"post",
                 headers:{
                     "Accept":"application/json",

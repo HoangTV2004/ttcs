@@ -7,7 +7,7 @@ export default function Analysis() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:8080/api/analysis/cars");
+                const response = await fetch("https://94txyl-8080.csb.app/api/analysis/cars");
                 const result = await response.json();
                 setCount(result);
             } catch (error) { console.error("Error fetching data:", error);}

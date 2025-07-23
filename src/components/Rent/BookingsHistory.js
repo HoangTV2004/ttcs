@@ -14,7 +14,7 @@ export default function BookingsHistory() {
             console.log(creds);
             const id = creds.username;
             console.log(id);
-            const response = await fetch("http://localhost:8080/api/"+id+"/bookings")
+            const response = await fetch("https://94txyl-8080.csb.app/api/"+id+"/bookings")
             const data = await response.json();
             setBookings(data);
             console.log(data);
@@ -24,7 +24,7 @@ export default function BookingsHistory() {
     useEffect(()=>{
         const fetchData = async () => {
             try{
-                const response = await fetch("http://localhost:8080/api/cars");
+                const response = await fetch("https://94txyl-8080.csb.app/api/cars");
                 const data = await response.json();
                 //console.log(data);
                 setCars(data);
